@@ -11,3 +11,7 @@ import os
 # Step 1: Load Data
 df = load_data("data/diabetes.csv")
 print(df.columns)
+
+# Step 2: Preprocess
+X, y = preprocess_data(df)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
