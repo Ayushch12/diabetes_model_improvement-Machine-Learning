@@ -19,3 +19,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Step 3: Train
 model = train_model(X_train, y_train)
 
+# Step 4: Evaluate
+cm = evaluate_model(model, X_test, y_test)
+plot_conf_matrix(cm)
