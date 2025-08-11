@@ -22,3 +22,7 @@ model = train_model(X_train, y_train)
 # Step 4: Evaluate
 cm = evaluate_model(model, X_test, y_test)
 plot_conf_matrix(cm)
+
+# Step 5: Save Model
+os.makedirs("models", exist_ok=True)
+joblib.dump(model, "models/diabetes_xgboost_model.pkl")
